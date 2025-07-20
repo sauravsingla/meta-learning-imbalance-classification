@@ -1,0 +1,14 @@
+program: train_meta.py
+method: bayes
+metric:
+  name: f1
+  goal: maximize
+parameters:
+  lr:
+    distribution: log_uniform_values
+    min: 1e-4
+    max: 1e-2
+  hidden_dim:
+    values: [32, 64, 128]
+  batch_size:
+    values: [32, 64, 128]
